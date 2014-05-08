@@ -5,6 +5,10 @@
 # License: BSD 3 clause
 
 # GROUP 1: start
+# SETUP / INIT / OPTIONS / CONFIG
+# SET Helper functions
+# IO - LOADING DATA
+# Feature Extractions.
 from __future__ import print_function
 
 import logging
@@ -161,6 +165,11 @@ else:
     feature_names = np.asarray(vectorizer.get_feature_names())
 
 # GROUP 2: start
+# functions that takes the name of the classifier model
+# and returns the output of the model in terms of 4 results.
+# clf_descr, score, train_time, test_time
+# X_train, y_train = defined in the global namespace.
+# This part does define the main function of the function. CORE Function.
 def benchmark(clf):
     print('_' * 80)
     print("Training: ")
@@ -204,14 +213,14 @@ def benchmark(clf):
     return clf_descr, score, train_time, test_time
 
 # GROUP 3: start
-results = []
+results = [] #initialize the results array to empty lists.
 for clf, name in (
         (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
         (Perceptron(n_iter=50), "Perceptron"),
         (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
-        (KNeighborsClassifier(n_neighbors=10), "kNN")):
-    print('=' * 80)
-    print(name)
+        (KNeighborsClassifier(n_neighbors=10), "kNN")): # Initialize the classifiers
+    print('=' * 80) # Print the equal sign 80 times.
+    print(name) # 
     results.append(benchmark(clf))
 
 for penalty in ["l2", "l1"]:

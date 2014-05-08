@@ -19,7 +19,7 @@ from sklearn import tree
 
 
 # sample variable (for showing import functionality)
-# version = '0.1.0'
+version = '0.1.0'
 
 # sample function (for showing import functionality)
 def add_vals(a, b=0):
@@ -181,10 +181,10 @@ def plot_all(clfs, data_file, output_file='out.png'):
 
 if __name__ == "__main__":
 
-    # print 'lab13 - this file was executed!'
-    pass
+    print 'lab13 - this file was executed!'
+    #pass
 
 else:
 
-    # print 'lab13 - this file was imported!'
-    pass
+    print 'lab13 - this file was imported!'
+    #pass
