@@ -58,5 +58,6 @@ Note: greenteapress makes many of their books available under creative commons (
 [San Francisco Data](https://data.sfgov.org/)  
 [govtrack.us](https://www.govtrack.us/developers)  
 [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)  
+[gapminder (world health, economic, OECD, etc)](http://www.gapminder.org/data/)
 
 
